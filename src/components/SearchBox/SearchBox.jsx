@@ -8,12 +8,11 @@ function SearchBox({ searchStr }) {
     <div className={s.form}>
       <h2>Find contacts by name</h2>
       <input
+        className={s.input}
         value={searchStr}
         onChange={(e) => dispatch(changeSearchStr(e.target.value))}
         type="text"
-        className="input"
         placeholder="Search"
-        className={s.input}
       />
       {searchStr && (
         <button className={s.btn} onClick={() => dispatch(changeSearchStr(""))}>
